@@ -21,7 +21,7 @@ class Unbound < Formula
     ]
 
     if ARGV.include? "--with-libevent"
-      args << "--with-libevent=#{HOMEBREW_PREFIX}"
+      args << "--with-libevent"
     end
 
     system "./configure", *args
