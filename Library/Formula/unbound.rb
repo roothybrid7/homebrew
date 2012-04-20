@@ -6,9 +6,10 @@ class Unbound < Formula
   sha256 'fb71665851eb11d3b1ad5dd5f9d7b167e0902628c06db3d6fc14afd95cc970fa'
 
   depends_on 'ldns'
+  depends_on 'libevent'
 
   def install
-    system "./configure", "--disable-gost", "--prefix=#{prefix}"
+    system "./configure", "--disable-gost", "--prefix=#{prefix}", "--with-libevent"
     system "make install"
   end
 end
